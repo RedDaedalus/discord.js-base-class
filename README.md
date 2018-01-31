@@ -11,7 +11,6 @@ This is a simple example of a ping command's code. Put command files in the `com
 const Base = require("../base/Command");
 
 // Create a class for the command that extends the base command
-```js
  class Ping extends Base {
   constructor(client) {
     // Initialise base command and pass data - all properties except name are optional
