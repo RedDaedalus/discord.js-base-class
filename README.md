@@ -21,7 +21,10 @@ const Base = require("../base/Command");
       usage: "", // Usage does not include the command - it is simply the arguments passed
       category: "Information",
       cooldown: 1000,
-      aliases: ["pong"]
+      aliases: ["pong"],
+      // permLevel is interchangable with permission, although you can have both
+      permLevel: 0,
+      permission: "READ_MESSAGES"
     });
   }
   
