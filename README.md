@@ -11,7 +11,6 @@ This is a simple example of a ping command's code. Put command files in the `com
 const Base = require("../base/Command");
 
 // Create a class for the command that extends the base command
-```js
  class Ping extends Base {
   constructor(client) {
     // Initialise base command and pass data - all properties except name are optional
@@ -21,7 +20,10 @@ const Base = require("../base/Command");
       usage: "", // Usage does not include the command - it is simply the arguments passed
       category: "Information",
       cooldown: 1000,
-      aliases: ["pong"]
+      aliases: ["pong"],
+      // permLevel is interchangable with permission, although you can have both
+      permLevel: 0,
+      permission: "READ_MESSAGES"
     });
   }
   
