@@ -1,0 +1,25 @@
+{
+  "name": "discord.js-base-class",
+  "version": "1.0.0",
+  "description": "A simple base class for discord.js bots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RedstoneDaedalus/discord.js-base-class.git"
+  },
+  "keywords": [
+    "discord.js",
+    "base",
+    "discord",
+    "bot"
+  ],
+  "author": "RedstoneDaedalus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RedstoneDaedalus/discord.js-base-class/issues"
+  },
+  "homepage": "https://github.com/RedstoneDaedalus/discord.js-base-class#readme"
+}
