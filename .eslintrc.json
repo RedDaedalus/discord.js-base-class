@@ -1,0 +1,12 @@
+{
+    "extends": "rallycoding",
+    "rules": {
+        "quotes": ["error", "double", {"allowTemplateLiterals": true}],
+        "max-len": "off",
+        "react/require-extension": "off",
+        "no-eval": "off",
+        "no-confusing-arrow": "off",
+        "no-underscore-dangle": "off",
+        "radix": "off"
+    }
+}
