@@ -1,5 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const { readdir } = require("fs");
+const Enmap = require("enmap");
+const EnmapRethink = require("enmap-rethink");
 
 /** 
  * Represents a Discord client
@@ -41,6 +43,14 @@ class CustomClient extends Client {
 
         // Inform the user that the client has been initialised
         console.log(`Client initialised. You are using node ${process.version}.`);
+
+        // Rethinkdb
+        const provider = new EnmapRethink({ name: "guild_config", dbName: "enmap" });
+        /**
+         * Server settings
+         * @type {Enmap}
+         */
+        this.settings = new Enmap({ provider });
     }
 
     /**
