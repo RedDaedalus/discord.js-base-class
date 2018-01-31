@@ -54,3 +54,5 @@ class CustomClient extends Client {
         return this;
     }
 }
+
+module.exports = CustomClient;
