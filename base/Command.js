@@ -50,8 +50,16 @@ class Command {
 
         // Removes the user from the set after the cooldown is done
         setTimeout(() => {
-            this.cooldown.remove(user);
+            this.cooldown.delete(user);
         }, this.conf.cooldown);
+    }
+
+    setMessage(message) {
+        this.message = message;
+    }
+
+    respond(message) {
+        this.message.channel.send(message);
     }
 }
 

@@ -68,7 +68,7 @@ class CustomClient extends Client {
 
                 this.commands.set(command.help.name, command);
 
-                command.aliases.forEach(a => this.aliases.set(a, command.help.name));
+                command.conf.aliases.forEach(a => this.aliases.set(a, command.help.name));
             });
         });
 
@@ -84,7 +84,7 @@ class CustomClient extends Client {
             if (err) console.log(err);
 
             files.forEach(evt => {
-                const event = new (require(`../${path}/${event}`))(this);
+                const event = new (require(`../${path}/${evt}`))(this);
 
                 super.on(evt.split(".")[0], (...args) => event.run(...args));
             });
