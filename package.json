@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/RedstoneDaedalus/discord.js-base-class#readme",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "commander": "^2.13.0",
+    "discord.js": "^11.3.0",
+    "inquirer": "^5.0.1"
   }
 }
