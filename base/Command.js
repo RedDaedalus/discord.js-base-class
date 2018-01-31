@@ -1,5 +1,3 @@
-const { Collection } = require("discord.js");
-
 /** 
  * Represents a command
 */
@@ -39,7 +37,7 @@ class Command {
          * A set of the IDs of the users on cooldown
          * @type {Set}
          */
-        this.cooldown = [];
+        this.cooldown = new Set();
     }
 
     /**
