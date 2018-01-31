@@ -1,4 +1,5 @@
 const { Client, Collection } = require("discord.js");
+const { readdir } = require("fs");
 
 /** 
  * Represents a Discord client
@@ -51,6 +52,44 @@ class CustomClient extends Client {
         super.login(token);
 
         // Return this client to allow chaining of function calls
+        return this;
+    }
+
+    /**
+     * Loads all commands in the directory
+     * @param {String} path The path where the commands are located
+     */
+    loadCommands(path) {
+        readdir(path, (err, files) => {
+            if (err) console.log(err);
+
+            files.forEach(cmd => {
+                const command = new (require(`../${path}/${cmd}`))(this);
+
+                this.commands.set(command.help.name, command);
+
+                command.aliases.forEach(a => this.aliases.set(a, command.help.name));
+            });
+        });
+
+        return this;
+    }
+
+    /**
+     * Loads all events in the directory
+     * @param {String} path The path where the events are located
+     */
+    loadEvents(path) {
+        readdir(path, (err, files) => {
+            if (err) console.log(err);
+
+            files.forEach(evt => {
+                const event = new (require(`../${path}/${event}`))(this);
+
+                super.on(evt.split(".")[0], (...args) => event.run(...args));
+            });
+        });
+
         return this;
     }
 }
