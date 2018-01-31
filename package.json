@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/RedstoneDaedalus/discord.js-base-class/issues"
   },
-  "homepage": "https://github.com/RedstoneDaedalus/discord.js-base-class#readme"
+  "homepage": "https://github.com/RedstoneDaedalus/discord.js-base-class#readme",
+  "dependencies": {
+    "discord.js": "^11.3.0"
+  }
 }
