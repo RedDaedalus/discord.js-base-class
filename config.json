@@ -1,3 +1,7 @@
 {
-    "token": "yourToken"
+    "token": "yourToken",
+    "paths": {
+        "commands": "./commands",
+        "events": "./events"
+    }
 }
