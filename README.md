@@ -29,7 +29,7 @@ const Base = require("../base/Command");
   
   run(message, args) {
     // Respond with the time between now and when the user sent their message
-    super.respond(`Pong! Took ${Date.now() - message.createdAt}ms.`);
+    super.respond(`Pong! Took ${message.createdAt - Date.now()}ms.`);
   }
 }
 
