@@ -1,4 +1,5 @@
 # discord.js-base-class
+> Warning: This is highly out of date, and will not work with newer discord.js versions, and has some pretty serious dependency security issues. V2 is coming out soon.
 A simple base class for discord.js bots.
 
 # Setup
